@@ -5,8 +5,8 @@
   "scripts": {
     "zip": "zip -r _chrome.zip .",
     "dev": "parcel public/index.html --port 3000",
-    "build:parcel": "parcel build public/index.html --no-source-maps -d build/",
-    "publish": "npm run build:parcel && cp public/manifest.json build/ && zip build.zip build/"
+    "build:parcel": "parcel build public/index.html --no-source-maps -d build/ && cp public/manifest.json build/",
+    "publish": "npm run build:parcel  && zip build.zip build/"
   },
   "author": "",
   "assetsPath": "public/",
@@ -16,5 +16,12 @@
     "uglify-js": "^3.12.6",
     "webpack": "^5.20.2",
     "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
