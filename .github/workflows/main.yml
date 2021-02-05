@@ -1,0 +1,34 @@
+name: Build Extension
+on:
+  push:
+    tags: 
+      - 'v*'
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+#       - name: Cache Modules
+#         id: cache-modules
+#         uses: actions/cache@v2
+#         with:
+#           path: |
+#                 node_modules/**
+#           key: ${{ runner.os }}--${{ hashFiles('**/lockfiles') }}
+      - name: Installing Node Modules
+#         if: steps.cache-modules.outputs.cache-hit != 'true'
+        run: npm ci 
+      - name: Build 
+        run: npm run publish
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: Build-Output
+          path: build.zip
