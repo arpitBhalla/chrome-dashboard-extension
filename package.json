@@ -12,6 +12,7 @@
   "assetsPath": "public/",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "typescript": "^4.1.3",
     "uglify-js": "^3.12.6",
     "webpack": "^5.20.2",
