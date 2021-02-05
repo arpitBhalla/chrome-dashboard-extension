@@ -5,13 +5,15 @@ import { Period } from "./../types";
 import Subject from "./../utils/subject";
 
 function onAnchorClick(url: string) {
+  // @ts-ignore
   chrome.tabs.create({ url });
 }
 interface Props {
   data: Period;
+  now?: boolean;
 }
 
-const SubjectBox: React.FC<Props> = ({ data }: Props) => {
+const SubjectBox: React.FC<Props> = ({ data, now = false }: Props) => {
   return (
     <Box
       onClick={() => data.link && onAnchorClick(data.link)}

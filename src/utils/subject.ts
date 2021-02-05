@@ -1,8 +1,8 @@
 export default {
   "CAD(P)": "CAD LAB",
-  "CAD-L": "CAD Lab",
+  "CAD-L": "CAD Elective",
   "DOM-L": "DOM Lecture",
-  "DOM-T": "DOM Tut",
+  "DOM-T": "DOM Tutorial",
   "MD-L": "Machine Design Lecture",
   "MD-T": "Machine Design",
   "NE-L": "Nuclear Engineering Lecture",

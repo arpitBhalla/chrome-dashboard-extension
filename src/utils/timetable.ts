@@ -170,6 +170,7 @@ export default {
     {
       code: "MD-T",
       teacher: "Prof Satnam Singh",
+      link: "https://meet.google.com/lookup/bz3tpx7dlv",
       end: "11:35",
       start: "08:30",
     },
