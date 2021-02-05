@@ -6,9 +6,10 @@
     "zip": "zip -r _chrome.zip .",
     "dev": "parcel public/index.html --port 3000",
     "build:parcel": "parcel build public/index.html --no-source-maps -d build/",
-    "publish": "cp -R ./public ./build && npm run build:parcel && zip build.zip build/"
+    "publish": "npm run build:parcel && cp public/manifest.json build/ && zip build.zip build/"
   },
   "author": "",
+  "assetsPath": "public/",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.1.3",

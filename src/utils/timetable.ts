@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   0: [
     {
       code: "CAD-L",

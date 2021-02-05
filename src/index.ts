@@ -1,5 +1,5 @@
 import { filterToday } from "./utils/functions";
-import TIMETABLE from "./timetable";
+import TIMETABLE from "./utils/timetable";
 
 // function onAnchorClick(event) {
 //   chrome.tabs.create({ url: event.srcElement.href });
