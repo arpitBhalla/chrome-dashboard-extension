@@ -14,35 +14,24 @@ interface Props {
 const SubjectBox: React.FC<Props> = ({ data }: Props) => {
   return (
     <Box
-      borderRight="4px red solid"
-      borderRadius={6}
-      padding={1}
-      px={2}
+      onClick={() => data.link && onAnchorClick(data.link)}
+      borderRight={`6px ${data.link ? "green" : "red"} solid`}
+      borderRadius={4}
+      padding={2}
       boxShadow="0px 0px 20px 1px #ccc"
       margin={2}
     >
-      <Box display="flex" justifyContent="space-between">
-        <Typography variant="h5" color="textSecondary">
-          <b>{Subject[data.code]}</b>
-        </Typography>
-        <Typography variant="h6" color="textSecondary">
+      <Typography variant="h6" color="textSecondary">
+        <b>{Subject[data.code]}</b>
+      </Typography>
+      <Typography variant="subtitle1" color="textSecondary">
+        <b>
           {data.start}-{data.end}
-        </Typography>
-      </Box>
-      <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Typography variant="subtitle1" color="textSecondary">
-          <b>{data.teacher}</b>
-        </Typography>
-        {data.link && (
-          <Typography
-            onClick={() => onAnchorClick(data.link)}
-            variant="button"
-            color="textSecondary"
-          >
-            Open Meet
-          </Typography>
-        )}
-      </Box>
+        </b>
+      </Typography>
+      <Typography variant="subtitle2" color="textSecondary">
+        <b>{data.teacher}</b>
+      </Typography>
     </Box>
   );
 };
