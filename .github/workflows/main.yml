@@ -1,10 +1,8 @@
 name: Build Extension
 on:
   push:
-    tags: 
-      - 'v*'
-    branches: 
-      - master
+    tags:
+      - "v*"
 
 jobs:
   build:
@@ -15,17 +13,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-#       - name: Cache Modules
-#         id: cache-modules
-#         uses: actions/cache@v2
-#         with:
-#           path: |
-#                 node_modules/**
-#           key: ${{ runner.os }}--${{ hashFiles('**/lockfiles') }}
+      #       - name: Cache Modules
+      #         id: cache-modules
+      #         uses: actions/cache@v2
+      #         with:
+      #           path: |
+      #                 node_modules/**
+      #           key: ${{ runner.os }}--${{ hashFiles('**/lockfiles') }}
       - name: Installing Node Modules
-#         if: steps.cache-modules.outputs.cache-hit != 'true'
-        run: npm ci 
-      - name: Build 
+        #         if: steps.cache-modules.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Build
         run: npm run publish
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
