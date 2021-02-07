@@ -5,11 +5,8 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import { Period } from "../../../types";
 import Subject from "../../../utils/subject";
 import { FcBrokenLink } from "react-icons/fc";
+import { onAnchorClick } from "../../../utils/functions";
 
-function onAnchorClick(url: string) {
-  // @ts-ignore
-  chrome.tabs.create({ url });
-}
 interface Props {
   data: Period;
   now?: boolean;
@@ -48,8 +45,8 @@ const SubjectBox: React.FC<Props> = ({ data, now = false }: Props) => {
           <b>{data.teacher}</b>
         </Typography>
         <Typography variant="caption" color="primary">
-          {data.link && <FcBrokenLink />}
-          {data.link?.slice(0, 30)}...
+          {data.link?.slice(0, 30)}
+          {data.link && "..."}
         </Typography>
       </Box>
     </Box>

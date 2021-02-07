@@ -25,3 +25,9 @@ export const filterToday = (schedule) => {
   });
   return { currentPeriod, upcommingPeriod };
 };
+
+export function onAnchorClick(url: string) {
+  if (process.env.DEV) window.location.href = url;
+  // @ts-ignore
+  else chrome.tabs.create({ url });
+}

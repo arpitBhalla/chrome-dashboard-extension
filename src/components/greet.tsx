@@ -2,7 +2,7 @@ import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 
 const Greet = () => {
-  const day = new Date().getHours() / 4;
+  const day = parseInt((new Date().getHours() / 4).toString());
   return (
     <div>
       <Typography variant="h5" color="textSecondary">

@@ -7,6 +7,7 @@ import Time from "./components/time";
 import TimeTable from "./components/timetable";
 import Grid from "@material-ui/core/Grid";
 import Search from "./components/search";
+import Greet from "./components/greet";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Box p={2}>
         <Box display="flex" justifyContent="space-between">
           <Time />
+          <Greet />
         </Box>
         <Grid container>
           <Grid item xs={6}>
