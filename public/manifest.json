@@ -1,6 +1,6 @@
 {
   "name": "Mech Hub ME-01 Timetable",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Time Table for ME-01 with Google meet link",
   "browser_action": {
     "default_popup": "index.html"

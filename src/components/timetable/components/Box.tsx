@@ -1,8 +1,8 @@
 import * as React from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import { Period } from "./../types";
-import Subject from "./../utils/subject";
+import { Period } from "../../../types";
+import Subject from "../../../utils/subject";
 
 function onAnchorClick(url: string) {
   // @ts-ignore
