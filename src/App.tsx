@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Time from "./components/time";
 import TimeTable from "./components/timetable";
 import Grid from "@material-ui/core/Grid";
+// import Quote from "./components/quote";
 
 const App: React.FC = () => {
   return (
@@ -14,14 +15,27 @@ const App: React.FC = () => {
       <CssBaseline />
       <Box p={2}>
         <Grid container>
-          <Grid item xs={12}>
+          <Grid item xs={6}>
             <Time />
           </Grid>
-          <Grid item xs={3}></Grid>
-          <Grid item xs={6}></Grid>
-          <Grid item xs={3}>
-            {/* <TimeTable /> */}
+          <Grid
+            item
+            xs={6}
+            style={{ display: "flex", justifyContent: "flex-end" }}
+          >
+            <Typography variant="h6" color="primary">
+              Good Morning,
+            </Typography>{" "}
+            &nbsp;&nbsp;
+            <Typography variant="h5" color="secondary">
+              Arpit Bhalla
+            </Typography>
           </Grid>
+          <Grid item xs={6}>
+            <TimeTable />
+          </Grid>
+          <Grid item xs={3}></Grid>
+          <Grid item xs={3}></Grid>
         </Grid>
       </Box>
     </>
