@@ -5,7 +5,7 @@
   "scripts": {
     "zip": "zip -r _chrome.zip .",
     "dev": "DEV=true parcel public/index.html --port 3000",
-    "build:parcel": "parcel build public/index.html --no-source-maps -d build/ && cp public/manifest.json build/",
+    "build:parcel": "parcel build public/index.html --no-source-maps -d build/ && cp public/manifest.json build/ && cp public/assets build/",
     "publish": "npm run build:parcel  && zip -r build.zip build/"
   },
   "author": "",
