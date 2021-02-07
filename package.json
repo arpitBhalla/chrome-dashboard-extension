@@ -7,7 +7,7 @@
     "dev": "DEV=true parcel public/index.html --port 3000",
     "build": "GENERATE_SOURCEMAP=false npx react-scripts build",
     "build:parcel": "parcel build public/index.html --no-source-maps -d build/ && cp public/manifest.json build/ && cp -r public/assets build/",
-    "publish": "npm run build  && zip -r build.zip build/"
+    "publish": "npm run build:parcel  && zip -r build.zip build/"
   },
   "author": "",
   "assetsPath": "public/",
