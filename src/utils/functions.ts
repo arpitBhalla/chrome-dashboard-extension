@@ -11,8 +11,9 @@ export const formatTime = (time: Date, show: boolean = true): string => {
   return ("0" + hr).slice(-2) + ":" + ("0" + t.getMinutes()).slice(-2) + ampm;
 };
 
-export const filterToday = (schedule) => {
+export const filterToday = (schedule: Array<Period>) => {
   let current: string = formatTime(new Date(), false);
+  // @ts-ignore
   let currentPeriod: Period = null;
   let upcommingPeriod: Array<Period> = [];
 

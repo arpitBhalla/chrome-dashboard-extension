@@ -1,9 +1,6 @@
-import { FcGoogle } from "react-icons/fc";
 import * as React from "react";
 import Box from "@material-ui/core/Box";
-import TextField from "@material-ui/core/TextField";
 import Avatar from "@material-ui/core/Avatar";
-import InputAdornment from "@material-ui/core/InputAdornment";
 import Typography from "@material-ui/core/Typography";
 import { onAnchorClick } from "../utils/functions";
 import Grid from "@material-ui/core/Grid";
@@ -13,12 +10,11 @@ interface topSites {
   url: string;
 }
 const TopSites = () => {
-  const [q, setQ] = React.useState("");
   const [topSites, setTopSites] = React.useState<Array<topSites>>([]);
 
   React.useEffect(() => {
     let subs = true;
-    if (process.env.DEV)
+    if (process.env.DEV || process.env.NODE_ENV === "development")
       setTopSites(
         [...new Array(20)].fill({ title: "Google", url: "https://google.com" })
       );

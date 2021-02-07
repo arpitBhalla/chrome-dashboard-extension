@@ -1,4 +1,4 @@
-export default {
+const Subjects: any = {
   "CAD(P)": "CAD LAB",
   "CAD-L": "CAD Elective",
   "DOM-L": "DOM Lecture",
@@ -15,3 +15,5 @@ export default {
   "TOM(P)": "Theory of Machines Lab",
   "TPE-L": "Thermal Power lecture",
 };
+
+export default Subjects;

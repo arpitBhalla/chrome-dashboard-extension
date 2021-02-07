@@ -1,4 +1,4 @@
-export default {
+const timetable: any = {
   0: [
     {
       code: "CAD-L",
@@ -194,3 +194,5 @@ export default {
     },
   ],
 };
+
+export default timetable;

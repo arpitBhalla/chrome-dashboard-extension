@@ -4,7 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { Period } from "../../../types";
 import Subject from "../../../utils/subject";
-import { FcBrokenLink } from "react-icons/fc";
 import { onAnchorClick } from "../../../utils/functions";
 
 interface Props {
@@ -22,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SubjectBox: React.FC<Props> = ({ data, now = false }: Props) => {
+const SubjectBox: React.FC<Props> = ({ data }: Props) => {
   const classes = useStyles(Boolean(data.link));
   return (
     <Box
