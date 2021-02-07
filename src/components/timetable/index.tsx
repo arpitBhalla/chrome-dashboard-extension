@@ -18,7 +18,7 @@ const TimeTable: React.FC = () => {
   );
 
   return (
-    <Box p={2}>
+    <Box p={2} border="1px solid #eee" borderRadius={3}>
       {currentPeriod && (
         <>
           <Label name="Ongoing" />
@@ -30,7 +30,11 @@ const TimeTable: React.FC = () => {
         <SubjectBox key={i} data={period} />
       ))}
 
-      {!!nextDayTable.length && <Label name="Next Day" />}
+      {!!nextDayTable.length && (
+        <Label
+          name={TODAY_DAY >= 5 || TODAY_DAY === 0 ? "Monday" : "Next Day"}
+        />
+      )}
 
       {nextDayTable.map((period, i) => (
         <SubjectBox key={i} data={period} />

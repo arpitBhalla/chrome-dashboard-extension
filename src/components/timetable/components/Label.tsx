@@ -9,7 +9,7 @@ interface Props {
 const Label: React.FC<Props> = ({ name }: Props) => {
   return (
     <Box borderLeft={`4px grey solid`} padding={1}>
-      <Typography variant="h6" color="textSecondary">
+      <Typography variant="subtitle1" color="textSecondary">
         <b>{name}</b>
       </Typography>
     </Box>
