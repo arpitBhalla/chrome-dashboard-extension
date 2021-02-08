@@ -34,13 +34,13 @@ const App: React.FC = () => {
         <Container maxWidth="lg">
           <Box p={2}>
             <Grid container spacing={1}>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 {/* <Typography variant="caption" color="textSecondary">
                   TimeTable
                 </Typography> */}
                 <TimeTable />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 {/* <Typography variant="caption" color="textSecondary">
                   Top Sites
                 </Typography> */}

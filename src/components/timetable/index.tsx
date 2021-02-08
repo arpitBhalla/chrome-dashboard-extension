@@ -4,13 +4,14 @@ import timetable from "../../utils/timetable";
 import SubjectBox from "./components/Box";
 import Label from "./components/Label";
 import Box from "@material-ui/core/Box";
+import { Period } from "./../../types";
 
 const TimeTable: React.FC = () => {
   const TODAY = new Date();
   const TODAY_DAY = TODAY.getDay();
-  // const nextDayTable: Array<Period> =
-  //   (TODAY_DAY >= 5 || TODAY_DAY === 0 ? timetable[0] : timetable[TODAY_DAY]) ||
-  //   [];
+  const nextDayTable: Array<Period> =
+    (TODAY_DAY >= 5 || TODAY_DAY === 0 ? timetable[0] : timetable[TODAY_DAY]) ||
+    [];
 
   const { upcommingPeriod, currentPeriod } = filterToday(
     timetable[TODAY_DAY - 1] || []
@@ -25,20 +26,23 @@ const TimeTable: React.FC = () => {
         </>
       )}
       <br />
-      {!!upcommingPeriod.length && <Label name="Later Today" />}
-      {upcommingPeriod.map((period, i) => (
-        <SubjectBox key={i} data={period} />
-      ))}
-
-      {/* {!!nextDayTable.length && (
-        <Label
-          name={TODAY_DAY >= 5 || TODAY_DAY === 0 ? "Monday" : "Next Day"}
-        />
+      {upcommingPeriod.length ? (
+        <>
+          <Label name="Later Today" />
+          {upcommingPeriod.map((period, i) => (
+            <SubjectBox key={i} data={period} />
+          ))}
+        </>
+      ) : (
+        <>
+          <Label
+            name={TODAY_DAY >= 5 || TODAY_DAY === 0 ? "Monday" : "Next Day"}
+          />
+          {nextDayTable.map((period, i) => (
+            <SubjectBox key={i} data={period} />
+          ))}
+        </>
       )}
-
-      {nextDayTable.map((period, i) => (
-        <SubjectBox key={i} data={period} />
-      ))} */}
     </Box>
   );
 };

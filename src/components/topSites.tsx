@@ -83,7 +83,7 @@ const TopSites = () => {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} alignItems="stretch">
       {topSites.map((e, i) => (
         <Grid item key={i} xs={4}>
           <Box
@@ -96,7 +96,6 @@ const TopSites = () => {
             flexDirection="column"
             alignItems="center"
             borderRadius={2}
-            // border="1px solid #f1f1f188"
           >
             <img
               src={e.icon}
@@ -104,12 +103,9 @@ const TopSites = () => {
               width="50"
               style={{ objectFit: "contain" }}
             />
-            <Typography variant="caption" color="textSecondary">
+            <Typography variant="caption" align="center" color="textSecondary">
               <b>{e?.title?.slice(0, 20)}</b>
             </Typography>
-            {/* <Typography variant="caption" color="textSecondary">
-              {e?.url?.slice(0, 20)}
-            </Typography> */}
           </Box>
         </Grid>
       ))}
