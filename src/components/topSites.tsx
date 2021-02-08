@@ -4,53 +4,65 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import { onAnchorClick } from "../utils/functions";
 import Grid from "@material-ui/core/Grid";
-import {
-  SiGoogle,
-  SiGooglecalendar,
-  SiGoogleclassroom,
-  SiGoogledrive,
-  SiGooglehangoutsmeet,
-  SiGooglemaps,
-  SiGoogletranslate,
-  SiYoutube,
-  SiGmail,
-  SiFacebook,
-  SiInstagram,
-  SiLinkedin,
-  SiTwitter,
-} from "react-icons/si";
+
 interface topSites {
   title: string;
   url: string;
-  icon: React.FC;
+  icon: string;
 }
 
 let topSites: Array<topSites> = [
-  { title: "Google", icon: SiGoogle, url: "https://www.google.co.in" },
+  {
+    title: "Google",
+    icon: require("../static/google.png"),
+    url: "https://www.google.co.in",
+  },
+
+  {
+    title: "Google Classroom",
+    icon: require("./../static/classroom.png"),
+    url: "https://classroom.google.com",
+  },
+  {
+    title: "Youtube",
+    icon: require("../static/youtube.png"),
+    url: "https://www.youtube.com",
+  },
+  {
+    title: "Gmail",
+    icon: require("../static/gmail.png"),
+    url: "https://www.gmail.com",
+  },
+  {
+    title: "Google Drive",
+    icon: require("../static/drive.png"),
+    url: "https://drive.google.com",
+  },
+  {
+    title: "Google Meet",
+    icon: require("../static/meet.png"),
+    url: "https://meet.google.com",
+  },
+  {
+    title: "Google Maps",
+    icon: require("../static/maps.png"),
+    url: "https://maps.google.com",
+  },
   {
     title: "Google Calendar",
-    icon: SiGooglecalendar,
+    icon: require("../static/calender.png"),
     url: "https://calender.google.com",
   },
   {
-    title: "Google Classroom",
-    icon: SiGoogleclassroom,
-    url: "classroom.google.com",
-  },
-  { title: "Google Drive", icon: SiGoogledrive, url: "drive.google.com" },
-  { title: "Google Meet", icon: SiGooglehangoutsmeet, url: "meet.google.com" },
-  { title: "Google Maps", icon: SiGooglemaps, url: "maps.google.com" },
-  {
     title: "Google Translate",
-    icon: SiGoogletranslate,
-    url: "translate.google.com",
+    icon: require("../static/translate.png"),
+    url: "https://translate.google.com",
   },
-  { title: "Youtube", icon: SiYoutube, url: "youtube.com" },
-  { title: "Gmail", icon: SiGmail, url: "gmail.com" },
-  { title: "Facebook", icon: SiFacebook, url: "fb.me" },
-  { title: "Instagram", icon: SiInstagram, url: "instagram.com" },
-  { title: "Linkedin", icon: SiLinkedin, url: "linkedin.com" },
-  { title: "Twitter", icon: SiTwitter, url: "twitter.com" },
+
+  // { title: "Facebook", icon: SiFacebook, url: "https://www.facebook.com" },
+  // { title: "Instagram", icon: SiInstagram, url: "https://www.instagram.com" },
+  // { title: "Linkedin", icon: SiLinkedin, url: "https://www.linkedin.com" },
+  // { title: "Twitter", icon: SiTwitter, url: "https://www.twitter.com" },
 ];
 
 const TopSites = () => {
@@ -69,14 +81,18 @@ const TopSites = () => {
             borderRadius={2}
             border="1px solid #eee"
           >
-            <Avatar>{e?.title?.[0]}</Avatar>
-            {<e.icon />}
+            <img
+              src={e.icon}
+              height="40"
+              width="40"
+              style={{ objectFit: "contain" }}
+            />
             <Typography variant="body1" color="textSecondary">
               {e?.title?.slice(0, 20)}
             </Typography>
-            <Typography variant="caption" color="textSecondary">
+            {/* <Typography variant="caption" color="textSecondary">
               {e?.url?.slice(0, 20)}
-            </Typography>
+            </Typography> */}
           </Box>
         </Grid>
       ))}
