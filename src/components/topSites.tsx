@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@material-ui/core/Box";
-import Avatar from "@material-ui/core/Avatar";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 import Typography from "@material-ui/core/Typography";
 import { onAnchorClick } from "../utils/functions";
 import Grid from "@material-ui/core/Grid";
@@ -18,6 +18,11 @@ let topSites: Array<topSites> = [
     url: "https://www.google.co.in",
   },
 
+  {
+    title: "Website",
+    icon: require("./../static/logo.png"),
+    url: "https://nitkkr.ac.in",
+  },
   {
     title: "Google Classroom",
     icon: require("./../static/classroom.png"),
@@ -43,11 +48,11 @@ let topSites: Array<topSites> = [
     icon: require("../static/meet.png"),
     url: "https://meet.google.com",
   },
-  {
-    title: "Google Maps",
-    icon: require("../static/maps.png"),
-    url: "https://maps.google.com",
-  },
+  // {
+  //   title: "Google Maps",
+  //   icon: require("../static/maps.png"),
+  //   url: "https://maps.google.com",
+  // },
   {
     title: "Google Calendar",
     icon: require("../static/calender.png"),
@@ -64,13 +69,25 @@ let topSites: Array<topSites> = [
   // { title: "Linkedin", icon: SiLinkedin, url: "https://www.linkedin.com" },
   // { title: "Twitter", icon: SiTwitter, url: "https://www.twitter.com" },
 ];
+const useStyles = makeStyles((theme) => ({
+  root: {
+    transition: theme.transitions.create("background-color"),
+    backgroundColor: "#f1f1f133",
+    "&:hover": {
+      backgroundColor: "#f1f1f188",
+    },
+  },
+}));
 
 const TopSites = () => {
+  const classes = useStyles();
+
   return (
     <Grid container spacing={2}>
       {topSites.map((e, i) => (
         <Grid item key={i} xs={4}>
           <Box
+            className={classes.root}
             key={i}
             p={2}
             style={{ cursor: "pointer" }}
@@ -79,16 +96,16 @@ const TopSites = () => {
             flexDirection="column"
             alignItems="center"
             borderRadius={2}
-            border="1px solid #eee"
+            // border="1px solid #f1f1f188"
           >
             <img
               src={e.icon}
-              height="40"
-              width="40"
+              height="50"
+              width="50"
               style={{ objectFit: "contain" }}
             />
-            <Typography variant="body1" color="textSecondary">
-              {e?.title?.slice(0, 20)}
+            <Typography variant="caption" color="textSecondary">
+              <b>{e?.title?.slice(0, 20)}</b>
             </Typography>
             {/* <Typography variant="caption" color="textSecondary">
               {e?.url?.slice(0, 20)}

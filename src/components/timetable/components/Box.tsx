@@ -14,9 +14,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     cursor: (e) => e && "pointer",
     padding: theme.spacing(2),
-    borderBottom: "1px solid #eee",
+    // borderBottom: "1px solid #f1f1f133",
+    transition: theme.transitions.create("opacity"),
     "&:hover": {
-      boxShadow: (e) => e && "0px 0px 10px 1px #ddd",
+      opacity: 0.6,
     },
   },
 }));
@@ -43,7 +44,7 @@ const SubjectBox: React.FC<Props> = ({ data }: Props) => {
         <Typography variant="subtitle2" color="textSecondary">
           <b>{data.teacher}</b>
         </Typography>
-        <Typography variant="caption" color="primary">
+        <Typography variant="caption" color="initial">
           {data.link?.slice(0, 30)}
           {data.link && "..."}
         </Typography>

@@ -1,9 +1,7 @@
-import { FcGoogle } from "react-icons/fc";
 import * as React from "react";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import { onAnchorClick } from "../utils/functions";
 
 const Search = () => {
   const [q, setQ] = React.useState("");
@@ -15,15 +13,23 @@ const Search = () => {
         placeholder="Search here..."
         variant="outlined"
         value={q}
+        style={{ backgroundColor: "#f1f1f144" }}
         fullWidth
         onKeyDown={(e) => {
           if (e.key === "Enter")
-            onAnchorClick("https://google.com/search?q=" + q);
+            //@ts-ignore
+            chrome.search.query({
+              disposition: "CURRENT_TAB",
+              text: q,
+            });
         }}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <FcGoogle size="22" />
+              <img
+                style={{ width: "20px" }}
+                src={require("./../static/google.png")}
+              />
             </InputAdornment>
           ),
         }}

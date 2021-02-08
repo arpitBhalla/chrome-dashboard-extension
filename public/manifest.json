@@ -9,6 +9,6 @@
   "icons": {
     "128": "assets/icon.jpg"
   },
-  "permissions": ["topSites"],
+  "permissions": ["notifications", "search"],
   "manifest_version": 2
 }

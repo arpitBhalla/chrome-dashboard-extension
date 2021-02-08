@@ -55,6 +55,7 @@ const timetable: any = {
       start: "09:25",
       code: "DOM-L",
       teacher: "Prof Jaideep",
+      link: "https://meet.google.com/xgz-kiyi-wfq",
       end: "10:20",
     },
     {
@@ -114,6 +115,8 @@ const timetable: any = {
       start: "14:40",
       end: "15:35",
       teacher: "Prof Jaideep",
+      link: "https://meet.google.com/xgz-kiyi-wfq",
+
       code: "DOM-L",
     },
     {
