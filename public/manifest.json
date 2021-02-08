@@ -1,7 +1,7 @@
 {
   "name": "Mech Hub ME-01",
   "version": "1.5.0",
-  "description": "Dashboard for NIT Kurukshetra Students Department of Mechanical Engineering 2019-23 ",
+  "description": "Dashboard for ME-01 with Google meet link ",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
