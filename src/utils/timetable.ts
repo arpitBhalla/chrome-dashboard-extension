@@ -5,6 +5,7 @@ const timetable: any = {
       teacher: "Punit kumar",
       end: "09:25",
       start: "08:30",
+      link: "https://meet.google.com/ths-sids-rij?hs=224",
     },
     {
       teacher: "Prof Jaideep",
@@ -28,13 +29,7 @@ const timetable: any = {
       link:
         "https://meetingsapac29.webex.com/meetingsapac29/j.php?MTID=m90d78bb02503027f40e60c8d8d3e675b",
     },
-    {
-      end: "16:30",
-      start: "15:35",
-      code: "TPE-L",
-      teacher: "Neeraj Mehla",
-      link: "https://meet.google.com/lookup/ci2sitemt5",
-    },
+
     {
       code: "PT-L",
       teacher: "Prof Hari Singh",
@@ -83,6 +78,7 @@ const timetable: any = {
       teacher: "Punit Kumar",
       end: "17:25",
       start: "16:30",
+      link: "https://meet.google.com/ths-sids-rij?hs=224",
       code: "CAD-L",
     },
   ],
@@ -99,12 +95,13 @@ const timetable: any = {
       code: "DOM-T",
       end: "11:35",
     },
-    // {
-    //   code: "NE-L",
-    //   start: "11:35",
-    //   end: "12:30",
-    //   teacher: "Prof Nirmal Kant",
-    // },
+    {
+      teacher: "Punit Kumar",
+      end: "17:25",
+      start: "16:30",
+      link: "https://meet.google.com/ths-sids-rij?hs=224",
+      code: "CAD-L",
+    },
     {
       code: "SOM-L",
       start: "12:30",
@@ -193,7 +190,7 @@ const timetable: any = {
       end: "16:30",
       start: "14:40",
       code: "PT(P)",
-      teacher: "Prof Hari Singh",
+      teacher: "Ms Rashmi & Mr. Amit",
     },
   ],
 };
