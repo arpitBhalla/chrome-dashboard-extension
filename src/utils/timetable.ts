@@ -22,7 +22,7 @@ const timetable: any = {
       link: "https://meet.google.com/lookup/bz3tpx7dlv",
     },
     {
-      end: "15:35",
+      end: "15:30",
       code: "NE-L",
       teacher: "Prof Nirmal Kant",
       start: "14:40",
@@ -61,24 +61,16 @@ const timetable: any = {
     },
     {
       start: "14:40",
-      code: "NE-L",
-      teacher: "Prof Nirmal Kant",
       end: "15:35",
-      link:
-        "https://meetingsapac29.webex.com/meetingsapac29/j.php?MTID=m26be25d63009da80a9b49a22386989c6",
-    },
-    {
       code: "TPE-L",
       link: "https://meet.google.com/lookup/ci2sitemt5",
       teacher: "Neeraj Mehla",
-      start: "15:35",
-      end: "16:30",
     },
     {
       teacher: "Punit Kumar",
       end: "17:25",
       start: "16:30",
-      link: "https://meet.google.com/ths-sids-rij?hs=224",
+      link: "https://meet.google.com/ths-sids-rij",
       code: "CAD-L",
     },
   ],
