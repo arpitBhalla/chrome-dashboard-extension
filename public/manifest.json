@@ -9,6 +9,6 @@
   "icons": {
     "128": "assets/icon.jpg"
   },
-  "permissions": ["notifications", "search"],
+  "permissions": ["search"],
   "manifest_version": 2
 }

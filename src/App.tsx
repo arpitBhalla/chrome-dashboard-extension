@@ -16,11 +16,11 @@ const App: React.FC = () => {
     <>
       <CssBaseline />
       <Box
-        // height="100vh"
         px={2}
         pt={2}
         style={{
-          height: "max(100vh,100%)",
+          height: "100%",
+          minHeight: "100vh",
           background: `url(${require("./static/back.jpg")})`,
           backgroundSize: "cover",
         }}
