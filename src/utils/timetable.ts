@@ -87,13 +87,7 @@ const timetable: any = {
       code: "DOM-T",
       end: "11:35",
     },
-    {
-      teacher: "Punit Kumar",
-      end: "17:25",
-      start: "16:30",
-      link: "https://meet.google.com/ths-sids-rij?hs=224",
-      code: "CAD-L",
-    },
+  
     {
       code: "SOM-L",
       start: "12:30",
@@ -114,6 +108,13 @@ const timetable: any = {
       teacher: "Prof Hari Singh",
       start: "15:35",
       link: "https://meet.google.com/kzt-vfpf-zgk",
+    },
+    {
+      teacher: "Punit Kumar",
+      end: "17:25",
+      start: "16:30",
+      link: "https://meet.google.com/ths-sids-rij?hs=224",
+      code: "CAD-L",
     },
   ],
   3: [
