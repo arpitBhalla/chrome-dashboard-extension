@@ -28,7 +28,7 @@ export const filterToday = (schedule: Array<Period>) => {
 };
 
 export function onAnchorClick(url: string) {
-  if (process.env.DEV) window.location.href = url;
+  if (1 || process.env.DEV) window.location.href = url;
   // @ts-ignore
   else chrome.tabs.create({ url });
 }

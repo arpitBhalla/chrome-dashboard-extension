@@ -7,8 +7,10 @@
   },
   "offline_enabled": true,
   "icons": {
-    "128": "assets/128.jpg"
+    "96": "assets/logo-96.jpg",
+    "144": "assets/logo-144.jpg",
+    "512": "assets/logo-512.jpg"
   },
-  "permissions": ["search"],
+  "permissions": [],
   "manifest_version": 2
 }
