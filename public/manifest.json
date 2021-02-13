@@ -1,13 +1,13 @@
 {
   "name": "Mech Hub ME-01",
   "version": "1.5.0",
-  "description": "Dashboard for ME-01 with Google meet link ",
+  "description": "New Tab Dashboard for ME-01 with Google meet link",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "offline_enabled": true,
   "icons": {
-    "128": "assets/icon.jpg"
+    "128": "assets/128.jpg"
   },
   "permissions": ["search"],
   "manifest_version": 2

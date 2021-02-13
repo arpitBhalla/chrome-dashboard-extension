@@ -50,11 +50,11 @@ const App: React.FC = () => {
             </Grid>
           </Box>
         </Container>
-        <Box display="flex" justifyContent="center">
+        {/* <Box display="flex" justifyContent="center">
           <Typography variant="caption" color="textSecondary">
             Made By Arpit Bhalla
           </Typography>
-        </Box>
+        </Box> */}
       </Box>
     </>
   );
