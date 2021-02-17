@@ -1,5 +1,2 @@
 # chrome-extension
-<img src='https://img.shields.io/chrome-web-store/users/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge'/>
-<img src='https://img.shields.io/chrome-web-store/rating/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge'/>
-<img src='https://img.shields.io/chrome-web-store/v/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge'/>
-<img src='https://img.shields.io/chrome-web-store/rating-count/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge'/>
+![users](https://img.shields.io/chrome-web-store/users/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge) ![rating](https://img.shields.io/chrome-web-store/rating/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge) ![version](https://img.shields.io/chrome-web-store/v/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge) ![Count](https://img.shields.io/chrome-web-store/rating-count/lgdidkfcfndfpgfjlfnngnbjkkndphbc?style=for-the-badge)
