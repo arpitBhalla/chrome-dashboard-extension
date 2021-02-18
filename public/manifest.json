@@ -1,15 +1,13 @@
 {
   "name": "Mech Hub ME-01",
-  "version": "1.5.0.1",
+  "version": "1.5.0",
   "description": "Google meet link for ME-01",
   "browser_action": {
     "default_popup": "index.html"
   },
   "offline_enabled": true,
   "icons": {
-    "96": "assets/logo-96.png",
-    "144": "assets/logo-144.png",
-    "512": "assets/logo-512.png"
+    "96": "assets/logo-96.png"
   },
   "permissions": [],
   "manifest_version": 2

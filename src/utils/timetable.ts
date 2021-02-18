@@ -19,10 +19,9 @@ const timetable: any = {
       end: "11:35",
       code: "MD-L",
       teacher: "Prof Satnam Singh",
-      link: "https://meet.google.com/lookup/bz3tpx7dlv",
     },
     {
-      end: "15:30",
+      end: "16:30",
       code: "NE-L",
       teacher: "Prof Nirmal Kant",
       start: "14:40",
@@ -87,7 +86,7 @@ const timetable: any = {
       code: "DOM-T",
       end: "11:35",
     },
-  
+
     {
       code: "SOM-L",
       start: "12:30",
@@ -163,12 +162,11 @@ const timetable: any = {
     {
       code: "MD-T",
       teacher: "Prof Satnam Singh",
-      link: "https://meet.google.com/lookup/bz3tpx7dlv",
       end: "11:35",
       start: "08:30",
     },
     {
-      code: "SOM-T",
+      code: "SOM-L",
       teacher: "Prof Mahesh Gupta",
       start: "11:35",
       end: "12:30",
